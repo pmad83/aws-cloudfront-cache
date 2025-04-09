@@ -1,0 +1,13 @@
+cloudfront:
+  domain: xxxxxxxxxx.cloudfront.net
+  videoPath: video.mp4
+  keyPairId: XXXXXXXXXXXXXX
+  privateKeyPath: src/main/resources/keys/cloudfront-private-key.pem
+
+server:
+  port: 443
+  ssl:
+    key-store: src/main/resources/keys/keyXtore.p12
+    key-store-password: twoje_haslo_pkcs12
+    keyStoreType: PKCS12
+    keyAlias: tomcat

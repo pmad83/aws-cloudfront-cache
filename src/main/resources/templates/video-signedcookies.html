@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odtwarzacz wideo z Signed Cookies</title>
+</head>
+<body>
+<h1>Odtwarzacz wideo z Signed Cookies</h1>
+<video width="640" height="360" controls>
+    <source th:src="${videoUrl}" type="video/mp4">
+    Twoja przeglądarka nie obsługuje wideo.
+</video>
+
+<footer>
+    <ul>
+        <li>CloudFront-Policy cookie (base64): <span th:text="${CloudFrontPolicy}"></span></li>
+        <li>CloudFront-Signature cookie: <span th:text="${CloudFrontSignature}"></span></li>
+        <li>CloudFront-Key-Pair-Id cookie: <span th:text="${CloudFrontKeyPairId}"></span></li>
+    </ul>
+</footer>
+
+</body>
+</html>

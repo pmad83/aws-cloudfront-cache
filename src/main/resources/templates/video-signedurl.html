@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odtwarzacz wideo z Signed URL</title>
+</head>
+<body>
+<h1>Odtwarzacz wideo z Signed URL</h1>
+<video width="640" height="360" controls>
+    <source th:src="${videoUrl}" type="video/mp4">
+    Twoja przeglądarka nie obsługuje wideo.
+</video>
+
+<footer>
+    <ul>
+        <li>Signed URL: <span th:text="${videoUrl}"></span></li>
+    </ul>
+</footer>
+
+</body>
+</html>
